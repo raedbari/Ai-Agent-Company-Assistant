@@ -1,0 +1,55 @@
+{
+  "version": "0.1",
+  "status": "requires_company_review",
+  "skills": [
+    {
+      "key": "cybtx_infrastructure_advisory",
+      "name_ar": "استشارات الاستضافة والبنية التحتية",
+      "department": "cybtx",
+      "service_keys": ["hosting", "backup", "monitoring"],
+      "instructions_ar": "اشرح نطاق الاستضافة والنسخ الاحتياطي والمراقبة بلغة عملية. فرّق بين التوافر والنسخ والحماية، ولا تختر مواصفات أو مدة احتفاظ أو التزام خدمة دون مراجعة القسم."
+    },
+    {
+      "key": "cybtx_security_assessment",
+      "name_ar": "تقييم احتياجات الأمن السيبراني",
+      "department": "cybtx",
+      "service_keys": ["cybersecurity"],
+      "instructions_ar": "فرّق بين الفحص والحماية والمراقبة والاستجابة للحوادث. لا تعط ضمانًا مطلقًا بمنع الاختراق، ووجّه القرارات الحساسة لمراجعة القسم."
+    },
+    {
+      "key": "cybtx_ai_agent_discovery",
+      "name_ar": "اكتشاف احتياجات وكلاء الذكاء الاصطناعي",
+      "department": "cybtx",
+      "service_keys": ["ai_agent"],
+      "instructions_ar": "وضّح الفرق بين وكيل يجيب من المعرفة ووكيل ينفذ إجراءات أو يتكامل مع أنظمة. لا تفترض مصادر البيانات أو الصلاحيات أو قنوات التشغيل."
+    },
+    {
+      "key": "destination_marketing_advisory",
+      "name_ar": "استشارات الحملات التسويقية",
+      "department": "destination",
+      "service_keys": ["marketing"],
+      "instructions_ar": "اربط شرح الخدمة بهدف الحملة والجمهور والقنوات دون اختراع نتائج مضمونة أو ميزانية أو مدة تنفيذ."
+    },
+    {
+      "key": "destination_brand_design",
+      "name_ar": "اكتشاف احتياجات العلامة والتصميم",
+      "department": "destination",
+      "service_keys": ["logo_design", "visual_identity", "social_media_design"],
+      "instructions_ar": "اشرح الفرق بين الشعار والهوية البصرية وحزم تصاميم التواصل، ولا تفترض الألوان أو النمط أو عدد الملفات."
+    },
+    {
+      "key": "txsaas_product_discovery",
+      "name_ar": "اكتشاف احتياجات المنتجات البرمجية",
+      "department": "txsaas",
+      "service_keys": ["website_development", "mobile_app", "saas_platform"],
+      "instructions_ar": "اشرح نطاق المنتج البرمجي حسب المستخدمين والوظائف والمنصات ولوحة الإدارة، ولا تختر التقنية أو تعد بموعد أو تكلفة."
+    },
+    {
+      "key": "txsaas_integration_maintenance",
+      "name_ar": "تكامل الأنظمة وصيانة البرمجيات",
+      "department": "txsaas",
+      "service_keys": ["api_integration", "software_maintenance"],
+      "instructions_ar": "وضّح أن التكامل يحتاج معرفة النظامين وتدفق البيانات والصلاحيات، وأن الصيانة تحتاج فحص النظام الحالي قبل تحديد الحل."
+    }
+  ]
+}

@@ -1,0 +1,177 @@
+[
+  {
+    "name": "greeting_ar",
+    "inputs": {
+      "message": "السلام عليكم",
+      "conversation_context": {"stage": "new", "current_service": null}
+    },
+    "outputs": {
+      "primary_intent": "greeting",
+      "service_key": null,
+      "required_requirement_keys": [],
+      "forbidden_requirement_keys": [],
+      "pricing_requested": false
+    }
+  },
+  {
+    "name": "website_request_with_price",
+    "inputs": {
+      "message": "أشتي موقع لمطعمي وكم بيكلف؟",
+      "conversation_context": {"stage": "new", "current_service": null}
+    },
+    "outputs": {
+      "primary_intent": "service_request",
+      "service_key": "website_development",
+      "required_requirement_keys": ["business_type"],
+      "forbidden_requirement_keys": [],
+      "requirement_value_contains": {"business_type": "مطعم"},
+      "pricing_requested": true
+    }
+  },
+  {
+    "name": "off_topic_weather",
+    "inputs": {
+      "message": "كيف حالة الطقس اليوم؟",
+      "conversation_context": {"stage": "new", "current_service": null}
+    },
+    "outputs": {
+      "primary_intent": "off_topic",
+      "service_key": null,
+      "required_requirement_keys": [],
+      "forbidden_requirement_keys": [],
+      "pricing_requested": false
+    }
+  },
+  {
+    "name": "ai_agent_for_existing_site",
+    "inputs": {
+      "message": "أريد وكيل ذكاء اصطناعي لخدمة العملاء داخل موقعي الحالي",
+      "conversation_context": {"stage": "new", "current_service": null}
+    },
+    "outputs": {
+      "primary_intent": "service_request",
+      "service_key": "ai_agent",
+      "required_requirement_keys": [],
+      "forbidden_requirement_keys": [],
+      "pricing_requested": false
+    }
+  },
+  {
+    "name": "hosting_wordpress",
+    "inputs": {
+      "message": "أريد نقل موقع ووردبريس إلى استضافة مع نسخ احتياطي",
+      "conversation_context": {"stage": "new", "current_service": null}
+    },
+    "outputs": {
+      "primary_intent": "service_request",
+      "service_key": "hosting",
+      "required_requirement_keys": ["website_type"],
+      "forbidden_requirement_keys": [],
+      "pricing_requested": false
+    }
+  },
+  {
+    "name": "logo_design",
+    "inputs": {
+      "message": "أريد شعارًا لمطعم جديد اسمه مذاق",
+      "conversation_context": {"stage": "new", "current_service": null}
+    },
+    "outputs": {
+      "primary_intent": "service_request",
+      "service_key": "logo_design",
+      "required_requirement_keys": ["business_name"],
+      "forbidden_requirement_keys": [],
+      "requirement_value_contains": {"business_name": "مذاق"},
+      "pricing_requested": false
+    }
+  },
+  {
+    "name": "semantic_security_feature",
+    "inputs": {
+      "message": "أشتي أحمي الموقع حقي من الهجمات لأنهم اخترقوني",
+      "conversation_context": {
+        "stage": "requirements",
+        "current_service": "website_development",
+        "active_requirement": {
+          "key": "features",
+          "label_ar": "المزايا المطلوبة",
+          "question_ar": "ما أهم المزايا المطلوبة في الموقع؟",
+          "value_kind": "feature_list"
+        }
+      }
+    },
+    "outputs": {
+      "primary_intent": "clarification",
+      "service_key": null,
+      "required_requirement_keys": ["features"],
+      "forbidden_requirement_keys": [],
+      "requirement_value_contains": {"features": "حماية"},
+      "pricing_requested": false
+    }
+  },
+  {
+    "name": "arabic_interface_only",
+    "inputs": {
+      "message": "أشتي العربي فقط لأن مشروعي يخص العرب",
+      "conversation_context": {
+        "stage": "requirements",
+        "current_service": "website_development",
+        "active_requirement": {
+          "key": "languages",
+          "label_ar": "لغات الواجهة والتواصل",
+          "question_ar": "ما لغات واجهة الموقع المطلوبة؟",
+          "value_kind": "human_languages"
+        }
+      }
+    },
+    "outputs": {
+      "primary_intent": "clarification",
+      "service_key": null,
+      "required_requirement_keys": ["languages"],
+      "forbidden_requirement_keys": [],
+      "requirement_value_contains": {"languages": "العربية"},
+      "pricing_requested": false
+    }
+  },
+  {
+    "name": "programming_language_not_interface_language",
+    "inputs": {
+      "message": "بايثون",
+      "conversation_context": {
+        "stage": "requirements",
+        "current_service": "website_development",
+        "active_requirement": {
+          "key": "languages",
+          "label_ar": "لغات الواجهة والتواصل",
+          "question_ar": "ما لغات واجهة الموقع المطلوبة؟",
+          "value_kind": "human_languages"
+        }
+      }
+    },
+    "outputs": {
+      "primary_intent": "clarification",
+      "service_key": null,
+      "required_requirement_keys": [],
+      "forbidden_requirement_keys": ["languages"],
+      "pricing_requested": false
+    }
+  },
+  {
+    "name": "confirm_existing_draft",
+    "inputs": {
+      "message": "موافق، أنشئ التذكرة",
+      "conversation_context": {
+        "stage": "draft_review",
+        "current_service": "website_development",
+        "ticket_draft": {"exists": true, "version": 2, "status": "review"}
+      }
+    },
+    "outputs": {
+      "primary_intent": "ticket_confirm",
+      "service_key": null,
+      "required_requirement_keys": [],
+      "forbidden_requirement_keys": [],
+      "pricing_requested": false
+    }
+  }
+]
